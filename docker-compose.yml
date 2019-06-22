@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+  selenium-chrome:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    env_file: zh-burndown.env
+    expose:
+      - "4444"
+    ports:
+      - "5900"
+    shm_size: 2g

@@ -1,0 +1,9 @@
+resource_types:
+
+resources:
+  - name: zh-burndown
+    type: git
+    source:
+      uri: https://github.com/m1yag1/zh-burndown
+      branch: master
+
