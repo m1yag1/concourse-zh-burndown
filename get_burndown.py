@@ -22,7 +22,6 @@ login_user_locator = (By.ID, "login_field")
 login_password_locator = (By.ID, "password")
 login_submit_locator = (By.CSS_SELECTOR, "input.btn.btn-primary.btn-block")
 
-openstax_org_locator = (By.XPATH, "//*[contains(text(), 'openstax')]")
 burndown_title_locator = (By.CLASS_NAME, "zhc-milestone-title")
 loading_locator = (By.CLASS_NAME, "zhc-loading")
 burndown_svg_locator = (By.CLASS_NAME, "zhc-chart-svg")
