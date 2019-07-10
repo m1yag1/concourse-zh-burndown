@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+from datetime import datetime
 from io import BytesIO
 
 from PIL import Image
@@ -14,7 +15,7 @@ user = os.environ['GITHUB_USER']
 password = os.environ['GITHUB_PASSWORD']
 
 zenhub_login_url = "https://app.zenhub.com/login"
-burndown_chart_url = "https://app.zenhub.com/workspaces/content-engineering-tech-team-5af1f4cc12da5e6d74331b60/reports/burndown?milestoneId=4039659"
+burndown_chart_url = "https://app.zenhub.com/workspaces/content-engineering-tech-team-5af1f4cc12da5e6d74331b60/reports/burndown?milestoneId=4359181"
 
 login_button_locator = (By.CSS_SELECTOR, "#app > div > div > div > div:nth-child(2) > div > button")
 login_user_locator = (By.ID, "login_field")
@@ -75,4 +76,6 @@ bottom = top + 530
 
 im = im.crop((left, top, right, bottom))
 
-im.save('screenshot.png')
+filename = datetime.now().strftime('%Y%m%d-burndown.png')
+
+im.save(filename)
